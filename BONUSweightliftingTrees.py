@@ -4,7 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 #######Load and format the data##################################
-data = pd.read_csv('E:/science/enseignement/expose 2/weightlifting/weightlifting_dataset.csv') # put the location of the dataset on your computer
+data = pd.read_csv('dataset.csv') # put the location of the dataset on your computer
 data['hips'] = data['hips'].replace({'yes': 1, 'no': 0}) # correct the data format
 data['sex'] = data['sex'].replace({'f': 0, 'm': 1}) # correct the data format
 data['injury'] = data[['shoulder', 'knees', 'back', 'wrist', 'hips']].max(axis=1) # regroup all types of injury
